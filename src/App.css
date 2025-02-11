@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+/* General page styling */
+body {
+  /* background-image: url("/assets/background.jpg"); */ /* ✅ Ensure this exact path */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
+/* Main container */
+.container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: #dcdcdc;
+  margin: 0 auto;
+}
+
+/* Login Box */
+.login-box {
+  background-color: rgba(40, 40, 40, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+.logout-button {
+  background-color: #d32f2f;
+}
+
+.logout-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Features Section */
+.features {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.feature-box {
+  background-color: rgba(50, 50, 50, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.feature-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.feature-box h2 {
+  font-size: 1.6rem;
+  color: #ffc107;
+}
+
+.feature-box p {
+  font-size: 1.1rem;
+  color: #dcdcdc;
+}
+
+/* Disclaimer */
+.disclaimer {
+  font-size: 0.9rem;
+  color: #a8a8a8;
+  margin-top: 20px;
+  max-width: 600px;
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 10px;
 }

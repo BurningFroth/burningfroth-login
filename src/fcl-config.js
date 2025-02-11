@@ -10,13 +10,11 @@ const fclConfigInfo = {
 };
 
 const network = "testnet";
-
-// ✅ Declare this variable OUTSIDE of init() to avoid syntax errors
-const WALLET_CONNECT_PROJECT_ID = "c530854490dd68d9e4888f64afa9d8d2"; 
+const WALLET_CONNECT_PROJECT_ID = "c530854490dd68d9e4888f64afa9d8d2";
 
 fcl.config({
   "app.detail.title": "BurningFroth",
-  "app.detail.icon": "/logo192.png", // Ensure logo is inside 'public/' folder
+  "app.detail.icon": "/logo192.png",
   "flow.network": network,
   "accessNode.api": fclConfigInfo[network].accessNode,
   "discovery.wallet": fclConfigInfo[network].discoveryWallet,
@@ -24,12 +22,12 @@ fcl.config({
 });
 
 init({
-  projectId: WALLET_CONNECT_PROJECT_ID, 
+  projectId: WALLET_CONNECT_PROJECT_ID,
   metadata: {
     name: "BurningFroth",
     description: "Burn Froth tokens and achieve milestones",
     url: "https://burningfroth.com",
-    icons: ["http://localhost:3000/logo512.png"], // ✅ Use the full URL
+    icons: ["https://burningfroth.com/logo512.png"],
   },
   includeBaseWC: true,
 }).then(({ FclWcServicePlugin }) => {
