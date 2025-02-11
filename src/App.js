@@ -1,7 +1,7 @@
 import React from "react";
 import * as fcl from "@onflow/fcl";
 import "./fcl-config";
-import "./App.css"; // Make sure App.css is imported
+import "./App.css"; // Ensure App.css is imported
 
 function App() {
   const [user, setUser] = React.useState({ loggedIn: false, addr: "" });
@@ -17,7 +17,7 @@ function App() {
     <div className="container">
       {/* Hero Section */}
       <div className="hero">
-        <img src="/logo512.png" alt="BurningFroth Logo" />
+        <img src="/logo512.png" alt="BurningFroth Logo" className="logo" />
         <h1>Welcome to BurningFroth</h1>
         <p>Burn Froth tokens, climb leaderboards, and unlock milestones!</p>
       </div>
@@ -30,25 +30,25 @@ function App() {
             <button onClick={logOut} className="logout-button">Log Out</button>
           </div>
         ) : (
-          <button onClick={logIn}>Log In</button>
+          <button onClick={logIn}>Connect Wallet</button> 
         )}
       </div>
 
       {/* Features Section */}
       <div className="features">
         <div className="feature-box">
-          <img src="/assets/BeFunky-design Burn Froth Icon.png" alt="Burn Froth" />
-          <h2>🔥 Burn Froth</h2>
+          <img src="/assets/BeFunky-design Burn Froth Icon.png" alt="Burn Froth" className="feature-icon" />
+          <h2>Burn Froth</h2>
           <p>Reduce the supply of Froth and earn ranking points.</p>
         </div>
         <div className="feature-box">
-          <img src="/assets/BeFunky-design Compete on Leaderboards Icon.png" alt="Compete on Leaderboards" />
-          <h2>🏆 Compete on Leaderboards</h2>
+          <img src="/assets/BeFunky-design Compete on Leaderboards Icon.png" alt="Compete on Leaderboards" className="feature-icon" />
+          <h2>Compete on Leaderboards</h2>
           <p>Show off your burning achievements.</p>
         </div>
         <div className="feature-box">
-          <img src="/assets/BeFunky-design Unlock Milestones Icon.png" alt="Unlock Milestones" />
-          <h2>🎖️ Unlock Milestones</h2>
+          <img src="/assets/BeFunky-design Unlock Milestones Icon.png" alt="Unlock Milestones" className="feature-icon" />
+          <h2>Unlock Milestones</h2>
           <p>Earn rewards and recognition for your contributions.</p>
         </div>
       </div>

@@ -1,13 +1,10 @@
 /* General page styling */
 body {
-  /* background-image: url("/assets/background.jpg"); */ /* ✅ Ensure this exact path */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  min-height: 100vh;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
-
-
 
 /* Main container */
 .container {
@@ -16,21 +13,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-align: center;
   padding: 20px;
+}
+
+/* ✅ Logo size (unchanged) */
+.logo {
+  width: 132px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   margin-bottom: 30px;
-}
-
-.hero img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
 }
 
 .hero h1 {
@@ -92,6 +88,14 @@ button:hover {
   text-align: center;
 }
 
+/* Feature Icons (unchanged) */
+.feature-icon {
+  width: 105px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* ✅ Feature Boxes - Adjusted to be oblong and spread out on desktop */
 .feature-box {
   background-color: rgba(50, 50, 50, 0.9);
   padding: 20px;
@@ -99,12 +103,7 @@ button:hover {
   text-align: center;
 }
 
-.feature-box img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
-
+/* Feature Box Text */
 .feature-box h2 {
   font-size: 1.6rem;
   color: #ffc107;
@@ -124,4 +123,22 @@ button:hover {
   text-align: center;
   border-top: 1px solid #444;
   padding-top: 10px;
+}
+
+/* ✅ Desktop Adjustments - Feature Boxes are now wide and evenly spaced */
+@media screen and (min-width: 1024px) {
+  .features {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px; /* Uses more screen space */
+  }
+
+  .feature-box {
+    flex: 1;
+    min-height: 160px;
+    max-width: 350px; /* Wider oblong size */
+    padding: 25px;
+  }
 }
