@@ -6,7 +6,7 @@ body {
   text-align: center;
 }
 
-/* ✅ Background images remain unchanged */
+/* ✅ Use correct background paths */
 @media screen and (min-width: 1024px) {
   body {
     background-image: url("../public/assets/background-desktop.jpg");
@@ -42,9 +42,16 @@ body {
   margin-bottom: 20px;
 }
 
+/* ✅ Added more space between logo and top of the page (Desktop Only) */
+@media screen and (min-width: 1024px) {
+  .hero {
+    margin-top: 50px; /* Increased gap */
+  }
+}
+
 /* ✅ Increased font size */
 .hero-title {
-  font-size: 3rem; /* Increased size */
+  font-size: 3rem;
   font-weight: bold;
   color: #ffc107;
 }
@@ -62,19 +69,18 @@ body {
   height: auto;
 }
 
-/* ✅ Login Box - Adjusted border color & made smaller */
+/* ✅ Login Box - Added dark orange border & spacing back */
 .login-box {
   background-color: rgba(40, 40, 40, 0.9);
-  padding: 5px; /* Tight padding */
+  padding: 5px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  width: auto; /* Auto size */
+  width: auto;
   text-align: center;
-  border: 2px solid #ff8c00; /* ✅ Dark Orange Border */
-  margin-bottom: 50px; /* ✅ Increased spacing below Connect Wallet */
+  border: 2px solid #ff8c00; /* ✅ Dark orange border added back */
 }
 
-/* ✅ Connect Wallet Button */
+/* ✅ Adjusted padding around the button */
 .connect-wallet-button {
   background-color: #1e88e5;
   color: white;
@@ -160,5 +166,10 @@ body {
 
   .feature-box p {
     font-size: 1.1rem;
+  }
+
+  /* ✅ Added spacing between Connect Wallet & Feature Boxes */
+  .login-box {
+    margin-bottom: 40px;
   }
 }
