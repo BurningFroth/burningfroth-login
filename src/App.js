@@ -13,21 +13,13 @@ function App() {
   const logIn = () => fcl.authenticate();
   const logOut = () => fcl.unauthenticate();
 
-  // ✅ Detect screen width to apply the correct background image
-  const isDesktop = window.innerWidth >= 1024;
-  const backgroundImage = isDesktop
-    ? "/assets/background-desktop.jpg"
-    : "/assets/background-mobile.jpg";
-
   return (
-    <div className="container" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+    <div className="container">
       {/* Hero Section */}
       <div className="hero">
         <img src="/logo512.png" alt="BurningFroth Logo" className="logo" />
-        <h1 className="hero-title">Welcome to BurningFroth</h1>
-        <p className="hero-text">
-          Burn Froth tokens, climb leaderboards, and unlock milestones!
-        </p>
+        <h1 className="hero-title">BurningFroth</h1>
+        <p className="hero-text">Where milestones are forged in fire!</p>
       </div>
 
       {/* Login Section */}
@@ -38,7 +30,7 @@ function App() {
             <button onClick={logOut} className="logout-button">Log Out</button>
           </div>
         ) : (
-          <button onClick={logIn}>Connect Wallet</button>
+          <button onClick={logIn} className="connect-wallet-button">Connect Wallet</button>
         )}
       </div>
 
