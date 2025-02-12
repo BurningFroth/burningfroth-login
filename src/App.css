@@ -1,9 +1,10 @@
 /* General page styling */
 body {
+  font-family: Arial, sans-serif;
   background-color: #121212;
   color: white;
   text-align: center;
-  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
 /* Main container */
@@ -16,17 +17,16 @@ body {
   padding: 20px;
 }
 
-/* ✅ Logo size (unchanged) */
-.logo {
-  width: 132px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
 /* Hero Section */
 .hero {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  width: 130px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
@@ -42,15 +42,16 @@ body {
   margin: 0 auto;
 }
 
-/* Login Box */
+/* ✅ Tighter Login Box */
 .login-box {
   background-color: rgba(40, 40, 40, 0.9);
-  padding: 20px;
+  padding: 12px;
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-width: 350px;
+  width: auto; /* ✅ Adjusted to fit button size */
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Buttons */
@@ -82,20 +83,12 @@ button:hover {
 /* Features Section */
 .features {
   margin-top: 30px;
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   max-width: 700px;
-  text-align: center;
 }
 
-/* Feature Icons (unchanged) */
-.feature-icon {
-  width: 105px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-/* ✅ Feature Boxes - Adjusted to be oblong and spread out on desktop */
 .feature-box {
   background-color: rgba(50, 50, 50, 0.9);
   padding: 20px;
@@ -103,7 +96,12 @@ button:hover {
   text-align: center;
 }
 
-/* Feature Box Text */
+.feature-box img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 .feature-box h2 {
   font-size: 1.6rem;
   color: #ffc107;
@@ -112,6 +110,21 @@ button:hover {
 .feature-box p {
   font-size: 1.1rem;
   color: #dcdcdc;
+}
+
+/* Desktop Adjustments */
+@media screen and (min-width: 1024px) {
+  .features {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .feature-box {
+    flex: 1;
+    min-height: 140px;
+    max-width: 300px;
+  }
 }
 
 /* Disclaimer */
@@ -123,22 +136,4 @@ button:hover {
   text-align: center;
   border-top: 1px solid #444;
   padding-top: 10px;
-}
-
-/* ✅ Desktop Adjustments - Feature Boxes are now wide and evenly spaced */
-@media screen and (min-width: 1024px) {
-  .features {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1100px; /* Uses more screen space */
-  }
-
-  .feature-box {
-    flex: 1;
-    min-height: 160px;
-    max-width: 350px; /* Wider oblong size */
-    padding: 25px;
-  }
 }
