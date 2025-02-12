@@ -1,57 +1,63 @@
 /* General page styling */
 body {
-  font-family: Arial, sans-serif;
   background-color: #121212;
   color: white;
+  font-family: Arial, sans-serif;
   text-align: center;
-  margin: 0;
 }
 
 /* Main container */
 .container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  min-height: 100vh;
   padding: 20px;
 }
 
 /* Hero Section */
 .hero {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.hero img {
-  width: 130px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
+/* ✅ Adjusted spacing for mobile */
+.hero-title {
+  font-size: 2.2rem;
   font-weight: bold;
   color: #ffc107;
 }
 
-.hero p {
+.hero-text {
   font-size: 1.2rem;
   max-width: 600px;
   color: #dcdcdc;
-  margin: 0 auto;
 }
 
-/* ✅ Tighter Login Box */
+/* Logo */
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Login Box */
 .login-box {
   background-color: rgba(40, 40, 40, 0.9);
-  padding: 12px;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  width: auto; /* ✅ Adjusted to fit button size */
+  width: 100%;
+  max-width: 280px;
   text-align: center;
-  display: flex;
-  justify-content: center;
+}
+
+/* ✅ Added extra spacing between Connect Wallet and Feature Boxes on Desktop */
+@media screen and (min-width: 1024px) {
+  .login-box {
+    margin-bottom: 40px; /* ✅ Increased gap */
+  }
 }
 
 /* Buttons */
@@ -80,15 +86,16 @@ button:hover {
   background-color: #b71c1c;
 }
 
-/* Features Section */
+/* ✅ Features Section */
 .features {
   margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  display: grid;
+  gap: 20px;
   max-width: 700px;
+  text-align: center;
 }
 
+/* ✅ Feature Boxes */
 .feature-box {
   background-color: rgba(50, 50, 50, 0.9);
   padding: 20px;
@@ -96,35 +103,11 @@ button:hover {
   text-align: center;
 }
 
-.feature-box img {
-  width: 70px;
+/* Feature Icons */
+.feature-icon {
+  width: 80px;
   height: auto;
   margin-bottom: 10px;
-}
-
-.feature-box h2 {
-  font-size: 1.6rem;
-  color: #ffc107;
-}
-
-.feature-box p {
-  font-size: 1.1rem;
-  color: #dcdcdc;
-}
-
-/* Desktop Adjustments */
-@media screen and (min-width: 1024px) {
-  .features {
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .feature-box {
-    flex: 1;
-    min-height: 140px;
-    max-width: 300px;
-  }
 }
 
 /* Disclaimer */
@@ -136,4 +119,32 @@ button:hover {
   text-align: center;
   border-top: 1px solid #444;
   padding-top: 10px;
+}
+
+/* ✅ Desktop-Specific Adjustments */
+@media screen and (min-width: 1024px) {
+  /* ✅ Spread feature boxes side by side */
+  .features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* ✅ Make feature boxes oblong & wider */
+  .feature-box {
+    flex: 1;
+    min-height: 150px;
+    max-width: 300px;
+  }
+
+  /* ✅ Ensure feature boxes use more screen space */
+  .feature-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .feature-box p {
+    font-size: 1.1rem;
+  }
 }
