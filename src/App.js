@@ -13,8 +13,14 @@ function App() {
   const logIn = () => fcl.authenticate();
   const logOut = () => fcl.unauthenticate();
 
+  // ✅ Detect screen width to apply the correct background image
+  const isDesktop = window.innerWidth >= 1024;
+  const backgroundImage = isDesktop
+    ? "/assets/background-desktop.jpg"
+    : "/assets/background-mobile.jpg";
+
   return (
-    <div className="container">
+    <div className="container" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }}>
       {/* Hero Section */}
       <div className="hero">
         <img src="/logo512.png" alt="BurningFroth Logo" className="logo" />
