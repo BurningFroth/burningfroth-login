@@ -17,8 +17,8 @@ function App() {
     <div className="container">
       {/* Hero Section */}
       <div className="hero">
-        <img src="/logo512.png" alt="BurningFroth Logo" className="logo" />
-        <h1 className="hero-title">BurningFroth</h1>
+        <img src="/logo512.png" alt="Burning Froth Logo" className="logo" />
+        <h1 className="hero-title">Burning Froth</h1>
         <p className="hero-text">Where milestones are forged in fire!</p>
       </div>
 
