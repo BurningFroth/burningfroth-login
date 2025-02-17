@@ -6,7 +6,7 @@ body {
   text-align: center;
 }
 
-/* ✅ Use correct background paths */
+/* ✅ Restored correct background images */
 @media screen and (min-width: 1024px) {
   body {
     background-image: url("../public/assets/background-desktop.jpg");
@@ -34,7 +34,7 @@ body {
   padding: 20px;
 }
 
-/* Hero Section */
+/* ✅ Restored correct spacing for Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
@@ -42,25 +42,18 @@ body {
   margin-bottom: 20px;
 }
 
-/* ✅ Increased space between logo and title (Desktop Only) */
-@media screen and (min-width: 1024px) {
-  .hero {
-    margin-top: 50px;
-  }
-}
-
-/* ✅ Title Styling - Ensured Black Ops One font */
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap'); /* ✅ Ensures font is loaded */
+/* ✅ Restored Black Ops One font for the title */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 .hero-title {
-  font-size: 3rem; /* Default size for desktop */
+  font-size: 3rem;
   font-weight: bold;
   color: #ffc107;
-  font-family: "Black Ops One", sans-serif; /* ✅ Ensures correct font */
+  font-family: "Black Ops One", sans-serif;
   margin-bottom: 5px; /* ✅ Reduced spacing */
 }
 
-/* ✅ Subtitle Styling - Reduced gap between title & subtitle */
+/* ✅ Adjusted subtitle to match spacing */
 .hero-text {
   font-size: 1.5rem;
   max-width: 600px;
@@ -68,17 +61,7 @@ body {
   margin-top: 0px; /* ✅ Pulls text closer */
 }
 
-/* ✅ Mobile-Specific Title & Subtitle Adjustments */
-@media screen and (max-width: 1023px) {
-  .hero-title {
-    font-size: 2.2rem; /* ✅ Reduced size for mobile */
-  }
-  .hero-text {
-    font-size: 1.2rem; /* ✅ Slightly smaller subtitle for mobile */
-  }
-}
-
-/* Logo */
+/* ✅ Restored correct logo size */
 .logo {
   width: 100px;
   height: auto;
@@ -93,9 +76,10 @@ body {
   width: auto;
   text-align: center;
   border: 2px solid #ff8c00;
+  margin-bottom: 20px; /* ✅ Added spacing between Connect Wallet and Feature Boxes */
 }
 
-/* ✅ Connect Wallet Button */
+/* ✅ Restored correct Wallet Connect Button styling */
 .connect-wallet-button {
   background-color: #1e88e5;
   color: white;
@@ -113,6 +97,7 @@ body {
   transform: scale(1.05);
 }
 
+/* ✅ Logout Button */
 .logout-button {
   background-color: #d32f2f;
 }
@@ -121,16 +106,15 @@ body {
   background-color: #b71c1c;
 }
 
-/* ✅ Features Section */
+/* ✅ Feature Boxes Section */
 .features {
-  margin-top: 30px;
   display: grid;
-  gap: 20px;
+  gap: 15px; /* ✅ Small gap between feature boxes */
   max-width: 700px;
   text-align: center;
 }
 
-/* ✅ Feature Boxes */
+/* ✅ Feature Box Styling */
 .feature-box {
   background-color: rgba(50, 50, 50, 0.9);
   padding: 20px;
@@ -140,38 +124,46 @@ body {
 
 /* ✅ Increased Feature Box Images by 30% */
 .feature-icon {
-  width: 104px; /* ✅ 30% increase from 80px */
+  width: 104px;
   height: auto;
   margin-bottom: 8px;
 }
 
-/* ✅ Reduce space between title & subtitle */
+/* ✅ Feature Box Titles */
 .feature-title {
   font-size: 1.6rem;
   color: #ff4500;
-  margin-bottom: 6px; /* ✅ Closer spacing */
+  margin-bottom: 6px;
 }
 
+/* ✅ Feature Box Subtitles */
 .feature-subtitle {
   font-size: 1.3rem;
   color: #ffa500;
-  margin-bottom: 4px; /* ✅ Closer spacing */
+  margin-bottom: 4px;
 }
 
+/* ✅ Feature Box Description */
 .feature-description {
   font-size: 1rem;
   color: white;
 }
 
-/* Disclaimer */
-.disclaimer {
-  font-size: 0.9rem;
-  color: #a8a8a8;
-  margin-top: 20px;
-  max-width: 600px;
-  text-align: center;
-  border-top: 1px solid #444;
-  padding-top: 10px;
+/* ✅ Removed underline from feature box links */
+.feature-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ✅ Disclaimer - Made text white */
+.disclaimer p {
+  color: white;
+  text-decoration: none;
+}
+
+.disclaimer a {
+  text-decoration: none;
+  color: white;
 }
 
 /* ✅ Desktop-Specific Adjustments */
