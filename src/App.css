@@ -1,6 +1,4 @@
 /* General page styling */
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-
 body {
   background-color: #121212;
   color: white;
@@ -51,36 +49,18 @@ body {
   }
 }
 
-/* ✅ BurningFroth Title - Black Ops One Font */
+/* ✅ Increased font size */
 .hero-title {
-  font-family: 'Black Ops One', cursive;
-  font-size: 3rem; /* Default for desktop */
+  font-size: 3rem;
   font-weight: bold;
   color: #ffc107;
-  text-transform: uppercase;
 }
 
-/* ✅ Make the font slightly smaller for mobile */
-@media screen and (max-width: 1023px) {
-  .hero-title {
-    font-size: 2.5rem; /* Slightly smaller for mobile */
-  }
-}
-
-/* ✅ Tagline (Where milestones are forged in fire!) */
+/* ✅ Increased tagline font size */
 .hero-text {
   font-size: 1.5rem;
   max-width: 600px;
   color: #dcdcdc;
-  margin-top: 10px; /* Default spacing */
-}
-
-/* ✅ Adjust for mobile - smaller font & closer to title */
-@media screen and (max-width: 1023px) {
-  .hero-text {
-    font-size: 1.2rem; /* Smaller font for mobile */
-    margin-top: 5px;  /* Pull it closer to the title */
-  }
 }
 
 /* Logo */
@@ -97,7 +77,7 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   width: auto;
   text-align: center;
-  border: 2px solid #ff8c00; /* ✅ Dark orange border added back */
+  border: 2px solid #ff8c00; /* ✅ Dark orange border */
 }
 
 /* ✅ Adjusted padding around the button */
@@ -143,16 +123,34 @@ body {
   text-align: center;
 }
 
-/* ✅ Feature Titles - Changed to Orange-Red */
-.feature-box h2 {
-  color: #ff4500; /* 🔥 Orange-Red */
+/* ✅ Feature Icons - Increased by 30% */
+.feature-icon {
+  width: 104px; /* 30% increase from 80px */
+  height: auto;
+  margin-bottom: 5px; /* ✅ Reduced spacing between image and title */
 }
 
-/* Feature Icons */
-.feature-icon {
-  width: 80px;
-  height: auto;
-  margin-bottom: 10px;
+/* ✅ Feature Box Title (Top Text) */
+.feature-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ff4500; /* Orange-red */
+  margin-bottom: 5px; /* ✅ Reduced spacing */
+}
+
+/* ✅ Feature Box Subtitle (Middle Text) - Changed to Yellow-Orange */
+.feature-subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffa500; /* Yellow-orange */
+  margin-bottom: 5px; /* ✅ Reduced spacing */
+}
+
+/* ✅ Feature Box Description (Bottom Text) */
+.feature-description {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0px; /* ✅ Ensured tight spacing */
 }
 
 /* Disclaimer */
