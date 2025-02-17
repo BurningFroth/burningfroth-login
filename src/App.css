@@ -42,25 +42,40 @@ body {
   margin-bottom: 20px;
 }
 
-/* ✅ Added more space between logo and top of the page (Desktop Only) */
+/* ✅ Increased space between logo and title (Desktop Only) */
 @media screen and (min-width: 1024px) {
   .hero {
-    margin-top: 50px; /* Increased gap */
+    margin-top: 50px;
   }
 }
 
-/* ✅ Increased font size */
+/* ✅ Title Styling - Ensured Black Ops One font */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap'); /* ✅ Ensures font is loaded */
+
 .hero-title {
-  font-size: 3rem;
+  font-size: 3rem; /* Default size for desktop */
   font-weight: bold;
   color: #ffc107;
+  font-family: "Black Ops One", sans-serif; /* ✅ Ensures correct font */
+  margin-bottom: 5px; /* ✅ Reduced spacing */
 }
 
-/* ✅ Increased tagline font size */
+/* ✅ Subtitle Styling - Reduced gap between title & subtitle */
 .hero-text {
   font-size: 1.5rem;
   max-width: 600px;
   color: #dcdcdc;
+  margin-top: 0px; /* ✅ Pulls text closer */
+}
+
+/* ✅ Mobile-Specific Title & Subtitle Adjustments */
+@media screen and (max-width: 1023px) {
+  .hero-title {
+    font-size: 2.2rem; /* ✅ Reduced size for mobile */
+  }
+  .hero-text {
+    font-size: 1.2rem; /* ✅ Slightly smaller subtitle for mobile */
+  }
 }
 
 /* Logo */
@@ -69,7 +84,7 @@ body {
   height: auto;
 }
 
-/* ✅ Login Box - Added dark orange border & spacing back */
+/* ✅ Login Box */
 .login-box {
   background-color: rgba(40, 40, 40, 0.9);
   padding: 5px;
@@ -77,10 +92,10 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   width: auto;
   text-align: center;
-  border: 2px solid #ff8c00; /* ✅ Dark orange border */
+  border: 2px solid #ff8c00;
 }
 
-/* ✅ Adjusted padding around the button */
+/* ✅ Connect Wallet Button */
 .connect-wallet-button {
   background-color: #1e88e5;
   color: white;
@@ -123,34 +138,29 @@ body {
   text-align: center;
 }
 
-/* ✅ Feature Icons - Increased by 30% */
+/* ✅ Increased Feature Box Images by 30% */
 .feature-icon {
-  width: 104px; /* 30% increase from 80px */
+  width: 104px; /* ✅ 30% increase from 80px */
   height: auto;
-  margin-bottom: 5px; /* ✅ Reduced spacing between image and title */
+  margin-bottom: 8px;
 }
 
-/* ✅ Feature Box Title (Top Text) */
+/* ✅ Reduce space between title & subtitle */
 .feature-title {
   font-size: 1.6rem;
-  font-weight: bold;
-  color: #ff4500; /* Orange-red */
-  margin-bottom: 5px; /* ✅ Reduced spacing */
+  color: #ff4500;
+  margin-bottom: 6px; /* ✅ Closer spacing */
 }
 
-/* ✅ Feature Box Subtitle (Middle Text) - Changed to Yellow-Orange */
 .feature-subtitle {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #ffa500; /* Yellow-orange */
-  margin-bottom: 5px; /* ✅ Reduced spacing */
+  font-size: 1.3rem;
+  color: #ffa500;
+  margin-bottom: 4px; /* ✅ Closer spacing */
 }
 
-/* ✅ Feature Box Description (Bottom Text) */
 .feature-description {
   font-size: 1rem;
   color: white;
-  margin-bottom: 0px; /* ✅ Ensured tight spacing */
 }
 
 /* Disclaimer */
