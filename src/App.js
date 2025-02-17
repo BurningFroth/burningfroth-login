@@ -40,7 +40,7 @@ function App() {
           <img src="/assets/BeFunky-design Burn Froth Icon.png" alt="Burn Froth" className="feature-icon" />
           <h2 className="feature-title">Scorched Earth Protocol</h2>
           <h3 className="feature-subtitle">Reduce the supply of Froth and earn ranking points</h3>
-          <p className="feature-description">A full-scale burning campaign no Froth left behind</p>
+          <p className="feature-description">A full-scale burning campaign—no Froth left behind</p>
         </div>
         <div className="feature-box" onClick={() => window.location.href='/leaderboard'}>
           <img src="/assets/BeFunky-design Compete on Leaderboards Icon.png" alt="Compete on Leaderboards" className="feature-icon" />
@@ -52,7 +52,7 @@ function App() {
           <img src="/assets/BeFunky-design Unlock Milestones Icon.png" alt="Unlock Milestones" className="feature-icon" />
           <h2 className="feature-title">Medal of Honor Burn Milestones</h2>
           <h3 className="feature-subtitle">Earn rewards and recognition for your contributions</h3>
-          <p className="feature-description">Every burn is a mission completed earn your stripes soldier</p>
+          <p className="feature-description">Every burn is a mission completed—earn your stripes, soldier!</p>
         </div>
       </div>
 
