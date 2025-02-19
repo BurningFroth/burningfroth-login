@@ -1,28 +1,30 @@
-/* ✅ Smooth Page Transitions */
+/* ✅ Smooth Page Transitions - Now Completely Seamless */
 .page-container {
   opacity: 0;
-  animation: fadeIn 0.4s ease-in forwards;
+  animation: fadeIn 0.5s ease-in-out forwards; /* ✅ Even smoother fade-in */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* ✅ Ensures vertical centering */
-  min-height: 100vh; /* ✅ Full screen height */
+  justify-content: center;
+  min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .fade-out {
-  animation: fadeOut 0.4s ease-out forwards;
+  animation: fadeOut 0.5s ease-in-out forwards; /* ✅ Slightly slower fade-out */
 }
 
+/* ✅ Adjusted Keyframe Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  0% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.5; transform: translateY(-5px); }
+  100% { opacity: 0; transform: translateY(-15px); }
 }
 
 /* ✅ Back Button */
@@ -64,10 +66,10 @@
   line-height: 1.6;
 }
 
-/* ✅ Page Images */
+/* ✅ Page Images - Slightly Larger */
 .page-image {
   display: block;
-  max-width: 70%;
+  max-width: 80%; /* ✅ Increased size slightly */
   margin: 0 auto 20px auto;
 }
 
@@ -81,7 +83,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 .wallet-address {

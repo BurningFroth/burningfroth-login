@@ -16,7 +16,7 @@ const PageTemplate = ({ title, content, image }) => {
     setFadeOut(true);
     setTimeout(() => {
       navigate("/");
-    }, 400); // ✅ Matches fade-out timing
+    }, 500); // ✅ Matches fade-out timing (now slightly smoother)
   };
 
   return (
