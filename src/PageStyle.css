@@ -98,14 +98,15 @@ body {
   transform: scale(1.05);
 }
 
-/* ✅ Image Styling */
+/* ✅ Page Image Styling - Increased by 20% & Removed Shadow */
 .page-image {
-  width: 80%; /* ✅ Adjust size */
-  max-width: 600px; /* ✅ Ensure image is not too large */
+  width: 60%; /* ✅ Increased size by 20% */
+  max-width: 600px; /* Ensures it doesn’t grow too large */
   height: auto;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 20px auto; /* Keeps the image centered */
+  box-shadow: none; /* ✅ Removed shadow effect */
+  border-radius: 0px; /* Keeps edges clean */
 }
 
 /* ✅ Mobile-Specific Adjustments */
