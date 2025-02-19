@@ -162,31 +162,25 @@ body {
   color: inherit;
 }
 
-/* ✅ Improved Disclaimer Section */
-.disclaimer-container {
-  width: 100%;
-  max-width: 700px;
-  margin-top: 30px; /* ✅ Added space above disclaimer */
-}
-
-.disclaimer-separator {
-  border: none;
-  height: 1px;
-  background-color: #444; /* ✅ Subtle line separator */
-  margin: 20px 0; /* ✅ Adds spacing between features & disclaimer */
-}
-
+/* ✅ Disclaimer - Made text white */
 .disclaimer p {
   color: white;
   text-decoration: none;
-  font-size: 0.9rem;
-  padding-bottom: 10px; /* ✅ Added spacing at the bottom */
 }
 
 .disclaimer a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+}
+
+/* ✅ Separator line above the disclaimer */
+.disclaimer-container {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px; /* Adds space between features and disclaimer */
+  padding-top: 15px; /* Adds some space above the line */
+  border-top: 2px solid #444; /* ✅ Creates a subtle line */
+  text-align: center;
 }
 
 /* ✅ Desktop-Specific Adjustments */
