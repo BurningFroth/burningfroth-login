@@ -61,6 +61,17 @@ body {
   margin-top: 0px; /* ✅ Pulls text closer */
 }
 
+/* ✅ Mobile-Specific Title & Subtitle Adjustments */
+@media screen and (max-width: 1023px) {
+  .hero-title {
+    font-size: 2.2rem; /* ✅ Keep this the same */
+  }
+
+  .hero-text {
+    font-size: 1.1rem; /* ✅ Reduced size for mobile */
+  }
+}
+
 /* ✅ Restored correct logo size */
 .logo {
   width: 100px;

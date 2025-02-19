@@ -1,15 +1,14 @@
 import React from "react";
 import PageTemplate from "./PageTemplate";
 
-function Milestones() {
+const Milestones = () => {
   return (
     <PageTemplate
       title="Prove Your Loyalty. Earn Your Rewards."
-      content="Burning isn’t just about reducing supply—it’s about earning your place in history. From private recruits to battle-hardened veterans, each milestone unlocks a new level of respect, recognition, and rewards."
-      image="/assets/BeFunky-design Unlock Milestones Icon.png"
+      content="Burning isn’t just about reducing supply—it’s about earning your place in history. Milestone NFTs = Proof of your contributions. Exclusive perks = Only for the most committed. Bragging rights = The ultimate prize."
+      image="/assets/unlock-milestones.png" // ✅ Changed to .png
     />
   );
-}
+};
 
 export default Milestones;
-

@@ -1,57 +1,133 @@
-/* Page Container */
+/* ✅ General Page Styling */
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* ✅ Corrected Background Image Paths */
+.burn-froth {
+  background-image: url("../public/assets/burn-froth.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.compete-leaderboards {
+  background-image: url("../public/assets/compete-leaderboards.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.unlock-milestones {
+  background-image: url("../public/assets/unlock-milestones.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.disclaimer-page {
+  background-image: url("../public/assets/disclaimer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ✅ Ensure the clickable disclaimer text at bottom of main page is not affected */
+.disclaimer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.disclaimer-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ✅ Page Container */
 .page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-  }
-  
-  /* Back Button */
-  .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .back-button:hover {
-    background-color: #d83c00;
-  }
-  
-  /* Page Image */
-  .page-image {
-    width: 80%;
-    max-width: 600px;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
-  }
-  
-  /* Page Title */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ✅ Page Title */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffa500; /* Orange-Yellow */
+  margin-bottom: 10px;
+}
+
+/* ✅ Page Content Styling */
+.page-content {
+  font-size: 1.2rem;
+  max-width: 800px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* ✅ Back Button Styling */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+/* ✅ Image Styling */
+.page-image {
+  width: 80%; /* ✅ Adjust size */
+  max-width: 600px; /* ✅ Ensure image is not too large */
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Mobile-Specific Adjustments */
+@media screen and (max-width: 768px) {
   .page-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffcc00;
-    margin-bottom: 10px;
+    font-size: 2rem;
   }
-  
-  /* Page Content */
+
   .page-content {
-    font-size: 1.2rem;
-    max-width: 800px;
-    color: white;
-    line-height: 1.5;
-    margin: 0 auto;
+    font-size: 1rem;
+    max-width: 90%;
   }
-  
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .page-image {
+    width: 90%;
+    max-width: 400px;
+  }
+}
