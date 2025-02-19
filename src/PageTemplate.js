@@ -1,38 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as fcl from "@onflow/fcl";
 import "./PageStyle.css";
 
 const PageTemplate = ({ title, content, image }) => {
   const navigate = useNavigate();
-  const [user, setUser] = React.useState({ loggedIn: false, addr: "" });
+  const [fadeOut, setFadeOut] = useState(false);
+  const [user, setUser] = useState({ loggedIn: false, addr: "" });
 
   React.useEffect(() => {
     fcl.currentUser.subscribe(setUser);
   }, []);
 
+  const handleBackClick = () => {
+    setFadeOut(true);
+    setTimeout(() => {
+      navigate("/");
+    }, 400); // ✅ Matches fade-out timing
+  };
+
   return (
-    <div className="page-container">
-      {/* ✅ BACK BUTTON IN TOP LEFT */}
-      <button onClick={() => navigate(-1)} className="back-button">
-        ⬅ Back
+    <div className={`page-container ${fadeOut ? "fade-out" : ""}`}>
+      <button className="back-button" onClick={handleBackClick}>
+        ← Back
       </button>
-
-      {/* ✅ PAGE IMAGE */}
       {image && <img src={image} alt={title} className="page-image" />}
-
-      {/* ✅ PAGE TITLE & CONTENT */}
       <h1 className="page-title">{title}</h1>
       <p className="page-content">{content}</p>
 
-      {/* ✅ CONNECT WALLET BUTTON */}
+      {/* ✅ Restored Connect Wallet Button */}
       <div className="wallet-box">
         {user.loggedIn ? (
-          <button onClick={() => fcl.unauthenticate()} className="logout-button">
-            Log Out
-          </button>
+          <p className="wallet-address">Connected: {user.addr}</p>
         ) : (
-          <button onClick={() => fcl.authenticate()} className="connect-wallet-button">
+          <button className="connect-wallet-button" onClick={() => fcl.authenticate()}>
             Connect Wallet
           </button>
         )}

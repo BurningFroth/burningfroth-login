@@ -1,91 +1,39 @@
-/* ✅ General Page Styling */
-body {
-  background-color: #121212;
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-/* ✅ Corrected Background Image Paths */
-.burn-froth {
-  background-image: url("../public/assets/burn-froth.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.compete-leaderboards {
-  background-image: url("../public/assets/compete-leaderboards.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.unlock-milestones {
-  background-image: url("../public/assets/unlock-milestones.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.disclaimer-page {
-  background-image: url("../public/assets/disclaimer.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* ✅ Ensure the clickable disclaimer text at bottom of main page is not affected */
-.disclaimer-link {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.disclaimer-link:hover {
-  text-decoration: underline;
-}
-
-
-/* ✅ Page Container */
+/* ✅ Smooth Page Transitions */
 .page-container {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in forwards;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  justify-content: center; /* ✅ Ensures vertical centering */
+  min-height: 100vh; /* ✅ Full screen height */
   padding: 20px;
-  text-align: center;
+  box-sizing: border-box;
 }
 
-/* ✅ Page Title */
-.page-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #ffa500; /* Orange-Yellow */
-  margin-bottom: 10px;
+.fade-out {
+  animation: fadeOut 0.4s ease-out forwards;
 }
 
-/* ✅ Page Content Styling */
-.page-content {
-  font-size: 1.2rem;
-  max-width: 800px;
-  line-height: 1.6;
-  color: white;
-  margin-bottom: 20px;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* ✅ Back Button Styling */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* ✅ Back Button */
 .back-button {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   background-color: #1e88e5;
   color: white;
   border: none;
-  padding: 10px 16px;
+  padding: 8px 16px;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 6px;
@@ -98,37 +46,63 @@ body {
   transform: scale(1.05);
 }
 
-/* ✅ Page Image Styling - Increased by 20% & Removed Shadow */
-.page-image {
-  width: 60%; /* ✅ Increased size by 20% */
-  max-width: 600px; /* Ensures it doesn’t grow too large */
-  height: auto;
-  display: block;
-  margin: 20px auto; /* Keeps the image centered */
-  box-shadow: none; /* ✅ Removed shadow effect */
-  border-radius: 0px; /* Keeps edges clean */
+/* ✅ Page Title */
+.page-title {
+  font-size: 2.2rem;
+  color: #ffc107;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-/* ✅ Mobile-Specific Adjustments */
-@media screen and (max-width: 768px) {
-  .page-title {
-    font-size: 2rem;
-  }
+/* ✅ Page Content */
+.page-content {
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
 
-  .page-content {
-    font-size: 1rem;
-    max-width: 90%;
-  }
+/* ✅ Page Images */
+.page-image {
+  display: block;
+  max-width: 70%;
+  margin: 0 auto 20px auto;
+}
 
-  .back-button {
-    top: 10px;
-    left: 10px;
-    padding: 8px 14px;
-    font-size: 0.9rem;
-  }
+/* ✅ Wallet Section */
+.wallet-box {
+  margin-top: 20px;
+}
 
-  .page-image {
-    width: 90%;
-    max-width: 400px;
-  }
+/* ✅ Fix Bottom Black Space */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+}
+
+.wallet-address {
+  color: #dcdcdc;
+  font-size: 1.1rem;
+}
+
+/* ✅ Connect Wallet Button */
+.connect-wallet-button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.connect-wallet-button:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
 }
