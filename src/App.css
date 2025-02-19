@@ -61,14 +61,10 @@ body {
   margin-top: 0px; /* ✅ Pulls text closer */
 }
 
-/* ✅ Mobile-Specific Title & Subtitle Adjustments */
+/* ✅ Mobile-Specific Subtitle Adjustments */
 @media screen and (max-width: 1023px) {
-  .hero-title {
-    font-size: 2.2rem; /* ✅ Keep this the same */
-  }
-
   .hero-text {
-    font-size: 1.1rem; /* ✅ Reduced size for mobile */
+    font-size: 1.3rem; /* ✅ Slightly smaller subtitle ONLY on mobile */
   }
 }
 
@@ -166,15 +162,31 @@ body {
   color: inherit;
 }
 
-/* ✅ Disclaimer - Made text white */
+/* ✅ Improved Disclaimer Section */
+.disclaimer-container {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px; /* ✅ Added space above disclaimer */
+}
+
+.disclaimer-separator {
+  border: none;
+  height: 1px;
+  background-color: #444; /* ✅ Subtle line separator */
+  margin: 20px 0; /* ✅ Adds spacing between features & disclaimer */
+}
+
 .disclaimer p {
   color: white;
   text-decoration: none;
+  font-size: 0.9rem;
+  padding-bottom: 10px; /* ✅ Added spacing at the bottom */
 }
 
 .disclaimer a {
   text-decoration: none;
   color: white;
+  font-weight: bold;
 }
 
 /* ✅ Desktop-Specific Adjustments */
