@@ -31,7 +31,6 @@ body {
   }
 }
 
-/* Main container */
 .container {
   display: flex;
   flex-direction: column;
@@ -39,6 +38,7 @@ body {
   min-height: 100vh; /* ✅ Ensures container covers full height */
   padding: 20px;
 }
+
 
 /* ✅ Restored correct spacing for Hero Section */
 .hero {
