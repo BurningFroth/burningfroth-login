@@ -1,8 +1,9 @@
 import React from "react";
+import "./App.css";
 
 const HomePage = ({ user, logIn, logOut }) => {
   return (
-    <div className="container">
+    <div className="home-container"> {/* ✅ Now uses the smooth transition */}
       {/* Hero Section */}
       <div className="hero">
         <img src="/logo512.png" alt="Burning Froth Logo" className="logo" />
@@ -22,7 +23,7 @@ const HomePage = ({ user, logIn, logOut }) => {
         )}
       </div>
 
-      {/* ✅ Features Section - ALL THREE FEATURE BOXES RESTORED */}
+      {/* Features Section */}
       <div className="features">
         <div className="feature-box" onClick={() => window.location.href='/burn-froth'}>
           <img src="/assets/BeFunky-design Burn Froth Icon.png" alt="Burn Froth" className="feature-icon" />
@@ -30,14 +31,12 @@ const HomePage = ({ user, logIn, logOut }) => {
           <h3 className="feature-subtitle">Reduce the supply of Froth and earn ranking points</h3>
           <p className="feature-description">A full-scale burning campaign—no Froth left behind</p>
         </div>
-
         <div className="feature-box" onClick={() => window.location.href='/leaderboard'}>
           <img src="/assets/BeFunky-design Compete on Leaderboards Icon.png" alt="Compete on Leaderboards" className="feature-icon" />
           <h2 className="feature-title">War Room The Leaderboard Campaign</h2>
           <h3 className="feature-subtitle">Show off your burning achievements</h3>
           <p className="feature-description">The battlefield where only the most ruthless burners rise to the top</p>
         </div>
-
         <div className="feature-box" onClick={() => window.location.href='/milestones'}>
           <img src="/assets/BeFunky-design Unlock Milestones Icon.png" alt="Unlock Milestones" className="feature-icon" />
           <h2 className="feature-title">Medal of Honor Burn Milestones</h2>
@@ -46,11 +45,9 @@ const HomePage = ({ user, logIn, logOut }) => {
         </div>
       </div>
 
-      {/* ✅ Disclaimer Section with Separator Line */}
-      <div className="disclaimer-container">
-        <div className="disclaimer" onClick={() => window.location.href='/disclaimer'}>
-          <p>Disclaimer: Burning Froth tokens is irreversible. Ensure you understand the implications before proceeding.</p>
-        </div>
+      {/* Disclaimer */}
+      <div className="disclaimer" onClick={() => window.location.href='/disclaimer'}>
+        <p>Disclaimer: Burning Froth tokens is irreversible. Ensure you understand the implications before proceeding.</p>
       </div>
     </div>
   );
