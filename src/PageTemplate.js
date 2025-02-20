@@ -16,7 +16,7 @@ const PageTemplate = ({ title, content, image }) => {
     setFadeOut(true);
     setTimeout(() => {
       navigate("/");
-    }, 500); // ✅ Matches fade-out timing
+    }, 400); // ✅ Matches fade-out timing
   };
 
   return (
@@ -28,7 +28,7 @@ const PageTemplate = ({ title, content, image }) => {
       <h1 className="page-title">{title}</h1>
       <p className="page-content">{content}</p>
 
-      {/* ✅ Restored Connect Wallet Button */}
+      {/* ✅ Wallet Connect Section */}
       <div className="wallet-box">
         {user.loggedIn ? (
           <p className="wallet-address">Connected: {user.addr}</p>

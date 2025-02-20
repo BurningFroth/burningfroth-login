@@ -162,23 +162,23 @@ body {
   color: inherit;
 }
 
-/* ✅ Disclaimer - Made text white */
+/* ✅ Disclaimer - Made text white and underlined */
 .disclaimer p {
   color: white;
   text-decoration: none;
 }
 
 .disclaimer a {
-  text-decoration: none;
+  text-decoration: underline; /* ✅ Underlined for clarity */
   color: white;
 }
 
-/* ✅ Separator line above the disclaimer */
+/* ✅ Separator line above the disclaimer (Tighter spacing) */
 .disclaimer-container {
   width: 100%;
   max-width: 700px;
-  margin-top: 30px; /* Adds space between features and disclaimer */
-  padding-top: 15px; /* Adds some space above the line */
+  margin-top: 10px; /* ✅ Reduced spacing from 15px to 10px */
+  padding-top: 5px; /* ✅ Reduced padding from 10px to 5px */
   border-top: 2px solid #444; /* ✅ Creates a subtle line */
   text-align: center;
 }
