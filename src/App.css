@@ -1,9 +1,13 @@
 /* General page styling */
-body {
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Fallback for older browsers */
+  min-height: 100dvh; /* ✅ Dynamic viewport height for modern mobile browsers */
   background-color: #121212;
-  color: white;
   font-family: Arial, sans-serif;
   text-align: center;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
 }
 
 /* ✅ Restored correct background images */
@@ -13,32 +17,30 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* ✅ Prevents background shift on scroll */
   }
 }
 
-/* ✅ Ensure full-height coverage on mobile */
 @media screen and (max-width: 1023px) {
-  body, html {
-    height: 100vh; /* ✅ Ensures full screen height */
-    overflow-y: auto; /* ✅ Allows scrolling if needed */
-  }
-
   body {
     background-image: url("../public/assets/background-mobile.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 
+/* Main container */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh; /* ✅ Ensures container covers full height */
+  min-height: 100vh; /* Fallback */
+  min-height: 100dvh; /* ✅ Ensures full height */
   padding: 20px;
+  box-sizing: border-box;
 }
-
 
 /* ✅ Restored correct spacing for Hero Section */
 .hero {

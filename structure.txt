@@ -1,0 +1,38 @@
+
+./public:
+assets/
+favicon.ico
+index.html
+logo192.png
+logo512.png
+manifest.json
+robots.txt
+
+./public/assets:
+background-desktop.jpg
+background-mobile.jpg
+BeFunky-design Burn Froth Icon.png
+BeFunky-design Compete on Leaderboards Icon.png
+BeFunky-design Unlock Milestones Icon.png
+burn-froth.png
+compete-leaderboards.png
+disclaimer.png
+unlock-milestones.png
+
+./src:
+App.css
+App.js
+App.test.js
+BurnFroth.js
+Disclaimer.js
+fcl-config.js
+HomePage.js
+index.css
+index.js
+Leaderboard.js
+logo.svg
+Milestones.js
+PageStyle.css
+PageTemplate.js
+reportWebVitals.js
+setupTests.js
